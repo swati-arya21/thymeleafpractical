@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Conditional Statement in thymeleaf</title>
+	</head>
+	<body>
+		<footer th:fragment="footer1(title,subtitle)">
+			<div class="container">
+				<p>This is footer section </p>
+				<h1 th:text="${title}"></h1>
+				<h1 th:text="${subtitle}"></h1>
+			</div>
+		</footer>
+	    
+	</body>
+</html>

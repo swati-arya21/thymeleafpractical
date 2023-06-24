@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<h1 th:text="${names}"></h1>
+		<!--each provide status variable which provides various functionaity
+		
+		index: the current iteration index, starting with zero 0
+		count: the number of elements processes so far
+		size: the total number of elements in the list 
+		even/odd: checks if the current iteration index is even or odd
+		first: checks if the current iteration is the first one
+		last: checks if the current iteration is the last one -->
+		<ul>
+			<li th:each="i, status:${names}">
+				<span th:style="${status.odd}?'font-weight:bold' :'font-style:italic' " th:text="${status.index}+ ' ' + ${i}"></span>
+				
+			</li>
+		</ul>
+		
+		<!--Thymeleaf conditional statement
+		1. Elvis Operator
+		2. if-Unless
+		3. Switch-Case-->
+	</body>
+</html>
